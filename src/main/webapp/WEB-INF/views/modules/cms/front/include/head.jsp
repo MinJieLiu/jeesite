@@ -15,6 +15,6 @@
 	<script src="${ctxStatic}/bootstrap/bsie/js/bootstrap-ie.min.js"></script>
   <![endif]-->
   <link href="${ctxStatic}/common/jeesite.css" rel="stylesheet" />
-  <link href="${ctxStaticTheme}/style.min.css" rel="stylesheet" />
-  <script src="${ctxStaticTheme}/script.min.js"></script>
+  <link href="${ctxStaticTheme}/style.css" rel="stylesheet" />
+  <script src="${ctxStaticTheme}/script.js"></script>
 </c:if>

@@ -3,7 +3,7 @@
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  */
-a:link,a:visited{color:#282828;text-decoration:none;}
+a:link{color:#282828;text-decoration:none;}
 a:hover,a:active{color:#ff0000;text-decoration:underline;}
 a.btn.btn-primary{color:#ffffff;}
 

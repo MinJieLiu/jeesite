@@ -6,17 +6,13 @@
 	<meta name="decorator" content="default"/>
 	<%@include file="/WEB-INF/views/include/treeview.jsp" %>
 	<style type="text/css">
-		.ztree {overflow:auto;margin:0;_margin-top:10px;padding:10px 0 0 0;}<%--
-		.ztree li span.button.level0, .ztree li a.level0 {display:none;height:0;}
-		.ztree li ul.level0 {padding:0;background:none;}--%>
+		.ztree {overflow:auto;margin:0;_margin-top:10px;padding:10px 0 0 0;}
 		.accordion-inner{padding:2px;}
 	</style>
-	<script type="text/javascript">
+	<script>
 		$(document).ready(function(){
 			var setting = {view:{selectedMulti:false},data:{simpleData:{enable:true}},callback: {onClick: treeOnClick}};
-			var zNodes=[
-		            <c:forEach items="${templateList}" var="tpl">{id:"${tpl.name}", pId:"${not empty tpl.parent?tpl.parent:0}", name:"${tpl.filename}", fullName:"${tpl.name}", isDirectory: ${tpl.directory}},
-		            </c:forEach>];
+			var zNodes=JSON.parse('[<c:forEach items="${templateList}" var="tpl" varStatus="index">{"id":"${tpl.name}", "pId":"${not empty tpl.parent?tpl.parent:0}", "name":"${tpl.filename}", "fullName":"${tpl.name}", "isDirectory": ${tpl.directory}}<c:if test="${!index.last}">,</c:if></c:forEach>]');
 			// 初始化树结构
 			var tree = $.fn.zTree.init($("#tree"), setting, zNodes);
 			// 展开第一级节点
