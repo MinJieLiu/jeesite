@@ -8,7 +8,7 @@
 	<style type="text/css">
 		#main {padding:0;margin:0;} #main .container-fluid{padding:0 7px 0 10px;}
 		#header {margin:0 0 10px;position:static;} #header li {font-size:14px;_font-size:12px;}
-		#header .brand {font-family:Helvetica, Georgia, Arial, sans-serif, 黑体;font-size:26px;padding-left:33px;}
+		#header .brand {font-family:Microsoft Yahei, Georgia, Arial, sans-serif, 黑体;font-size:26px;padding-left:33px;}
 		#footer {margin:8px 0 0 0;padding:3px 0 0 0;font-size:11px;text-align:center;border-top:2px solid #0663A2;}
 		#footer, #footer a {color:#999;} 
 	</style>
@@ -85,7 +85,7 @@
 				</div>
 			</div>
 		    <div id="footer" class="row-fluid">
-	            Copyright &copy; 2012-${fns:getConfig('copyrightYear')} ${fns:getConfig('productName')} - Powered By <a href="https://github.com/thinkgem/jeesite" target="_blank">JeeSite</a> ${fns:getConfig('version')}
+	            Copyright &copy; 2012-${fns:getConfig('copyrightYear')} ${fns:getConfig('productName')} - Powered By JeeSite ${fns:getConfig('version')}
 			</div>
 		</div>
 	</div>

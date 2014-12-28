@@ -9,8 +9,8 @@
 <link href="${ctxStatic}/jquery-validation/1.11.1/jquery.validate.css" type="text/css" rel="stylesheet" />
 <script src="${ctxStatic}/jquery-validation/1.11.1/jquery.validate.js" type="text/javascript"></script>
 <script src="${ctxStatic}/jquery-validation/1.11.1/jquery.validate.method.js" type="text/javascript"></script>
-<link href="${ctxStatic}/bootstrap/2.3.1/css_${not empty cookie.theme.value ? cookie.theme.value:'cerulean'}/bootstrap.css" type="text/css" rel="stylesheet" />
-<script src="${ctxStatic}/bootstrap/2.3.1/js/bootstrap.js" type="text/javascript"></script>
+<link href="${ctxStatic}/bootstrap/2.3.2/css_${not empty cookie.theme.value ? cookie.theme.value:'cerulean'}/bootstrap.css" type="text/css" rel="stylesheet" />
+<script src="${ctxStatic}/bootstrap/2.3.2/js/bootstrap.js" type="text/javascript"></script>
 <!--[if lte IE 6]><link href="${ctxStatic}/bootstrap/bsie/css/bootstrap-ie6.css" type="text/css" rel="stylesheet" />
 <script src="${ctxStatic}/bootstrap/bsie/js/bootstrap-ie.js" type="text/javascript"></script><![endif]-->
 <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
