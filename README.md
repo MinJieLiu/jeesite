@@ -29,14 +29,14 @@ JeeSite 提供了常用工具进行封装，包括日志工具、缓存工具、
 
 * Core Framework：Spring Framework 3.2。
 * Security Framework：Apache Shiro 1.2。
-* Workflow Engine：Activit 5.14。
+* Workflow Engine：Activit 5.16。
 
 2、Web相关
 
 * MVC Framework：SpringMVC 3.2。
 * Layout Decoration：SiteMesh 2.4。
-* JavaScript Library：JQuery 1.9。
-* CSS Framework：Twitter Bootstrap 2.3.1。
+* JavaScript Library：JQuery 1.11。
+* CSS Framework：Twitter Bootstrap 2.3.2。
 * JavaScript/CSS Compressor：YUI Compressor 2.4。
 * Front Validation：JQuery Validation Plugin 1.11。
 
