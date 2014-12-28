@@ -7,8 +7,10 @@
 	<meta name="decorator" content="cms_default_${site.theme}"/>
 	<meta name="description" content="${site.description}" />
 	<meta name="keywords" content="${site.keywords}" />
-	<script src="${ctxStatic}/My97DatePicker/WdatePicker.js" type="text/javascript"></script>
-	<style type="text/css">
+	<script src="${ctxStatic}/bootstrap/datepicker/bootstrap-datepicker.js"></script>
+    <script src="${ctxStatic}/bootstrap/datepicker/locales/bootstrap-datepicker.zh-CN.js"></script>
+    <link href="${ctxStatic}/bootstrap/datepicker/datepicker.css" rel="stylesheet" />
+	<style>
 		form.search{margin:12px 20px 5px;} .page{margin:20px;}
 		form.search input.txt{padding:3px;font-size:16px;width:300px;margin:5px;}
 		form.search select.txt{padding:3px;font-size:16px;width:308px;margin:5px;}
@@ -53,10 +55,11 @@
 							<option value="50"${page.pageSize eq '50'?' selected':''}>每页显示50条</option>
 						</select></td></tr>
 					<tr><td><c:if test="${empty t || t eq 'article'}">最后更新日期范围</c:if><c:if test="${t eq 'guestbook'}">留言日期范围</c:if></td><td>
-						<input id="bd" name="bd" type="text" readonly="readonly" maxlength="20" class="txt date"
-							value="${param.bd}" onclick="WdatePicker({dateFmt:'yyyy-MM-dd',isShowClear:true});"/>&nbsp;~&nbsp;
-						<input id="ed" name="ed" type="text" readonly="readonly" maxlength="20" class="txt date"
-							value="${param.ed}" onclick="WdatePicker({dateFmt:'yyyy-MM-dd',isShowClear:true});"/>
+						<div class="input-daterange input-group" id="datepicker">
+                            <input type="text" class="input-sm form-control" id="bd" name="bd" readonly="readonly" value="${param.bd}" />
+                            <span class="input-group-addon">to</span>
+                            <input type="text" class="input-sm form-control" id="ed" name="ed" readonly="readonly" value="${param.ed}" />
+                        </div>
 					</td></tr>
 				</table>
 			</c:when><c:otherwise>
@@ -94,6 +97,13 @@
 			$("#searchForm").submit();
 	    	return false;
 	    }
+		$('.input-daterange').datepicker({
+			format : "yyyy-mm-dd",
+			language : "zh-CN",
+			autoclose : true,
+			clearBtn : true,
+			todayHighlight : true
+		});
 	</script>
 </body>
 </html>

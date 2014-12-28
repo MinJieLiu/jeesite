@@ -33,15 +33,19 @@
 		<div class="control-group">
 			<label class="control-label" for="startTime">开始时间：</label>
 			<div class="controls">
-				<input id="startTime" name="startTime" type="text" readonly="readonly" maxlength="20" class="Wdate required"
-					onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss',isShowClear:false});"/>
+                <div class="input-append">
+                  <input id="startTime" name="startTime" type="text" readonly="readonly" maxlength="20" class="datepicker" />
+                  <span class="add-on"><i class="icon-calendar"></i></span>
+                </div>
 			</div>
 		</div>
 		<div class="control-group">
 			<label class="control-label" for="endTime">结束时间：</label>
 			<div class="controls">
-				<input id="endTime" name="endTime" type="text" readonly="readonly" maxlength="20" class="Wdate required"
-					onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss',isShowClear:false});"/>
+                <div class="input-append">
+                  <input id="endTime" name="endTime" type="text" readonly="readonly" maxlength="20" class="datepicker" />
+                  <span class="add-on"><i class="icon-calendar"></i></span>
+                </div>
 			</div>
 		</div>
 		<div class="control-group">

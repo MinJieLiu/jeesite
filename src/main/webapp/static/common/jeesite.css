@@ -242,6 +242,10 @@ a.btn-primary, a.btn-primary:hover, a.btn-warning, a.btn-warning:hover, a.btn-da
   background: none;
 }
 
+.accordion-heading a:focus, .dropdown a:focus {
+  text-decoration: none;
+}
+
 .accordion-heading .accordion-toggle {
   font-size: 14px;
   _padding-top: 10px;

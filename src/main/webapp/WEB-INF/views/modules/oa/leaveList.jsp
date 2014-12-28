@@ -25,10 +25,16 @@
 		<div>
 			<label>请假编号：</label><form:input path="ids" htmlEscape="false" maxlength="50" class="input-small" placeholder="逗号或空格隔开"/>
 			<label>创建开始：</label>
-			<input id="createDateStart"  name="createDateStart"  type="text" readonly="readonly" maxlength="20" class="input-small Wdate"  value="<fmt:formatDate value="${leave.createDateStart}" pattern="yyyy-MM-dd"/>" onclick="WdatePicker({dateFmt:'yyyy-MM-dd'});"/>
+            <div class="input-append">
+              <input id="createDateStart" name="createDateStart" type="text" readonly="readonly" maxlength="20" class="input-small datepicker" value="<fmt:formatDate value="${leave.createDateStart}" pattern="yyyy-MM-dd"/>" />
+              <span class="add-on"><i class="icon-calendar"></i></span>
+            </div>
 			<label>创建结束：</label>
-			<input id="createDateEnd" name="createDateEnd" type="text" readonly="readonly" maxlength="20" class="input-small Wdate" value="<fmt:formatDate value="${leave.createDateEnd}" pattern="yyyy-MM-dd"/>" onclick="WdatePicker({dateFmt:'yyyy-MM-dd'});"/>
-			&nbsp;<input id="btnSubmit" class="btn btn-primary" type="submit" value="查询"/>
+            <div class="input-append">
+              <input id="createDateEnd" name="createDateEnd" type="text" readonly="readonly" maxlength="20" class="input-small datepicker" value="<fmt:formatDate value="${leave.createDateEnd}" pattern="yyyy-MM-dd"/>" />
+              <span class="add-on"><i class="icon-calendar"></i></span>
+            </div>&nbsp;
+			<input id="btnSubmit" class="btn btn-primary" type="submit" value="查询"/>
 		</div>
 	</form:form>
 	<tags:message content="${message}"/>

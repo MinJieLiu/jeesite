@@ -108,5 +108,15 @@ function tableSort( configuration ){
 $(document).ready(function() {
 	//所有下拉框使用select2
 	$("select").select2();
-	$('.fancybox').fancybox();
+	$('.fancybox').fancybox({
+		openEffect	: 'elastic',
+    	closeEffect	: 'elastic'
+	});
+	$('.datepicker').datepicker({
+		format : "yyyy-mm-dd",
+		language : "zh-CN",
+		autoclose : true,
+		clearBtn : true,
+		todayHighlight : true
+	});
 });

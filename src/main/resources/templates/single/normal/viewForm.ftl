@@ -45,7 +45,10 @@
 			<div class="control-group">
 				<label class="control-label">${column.logicalName}:</label>
 				<div class="controls">
-					<input id="${column.instance?uncap_first}" name="${column.instance?uncap_first}" type="text" readonly="readonly" maxlength="20"  class="Wdate"   value="<fmt:formatDate value="${f.dollar}}{${sourceTable.entityClassName?uncap_first}.${column.instance?uncap_first}}" pattern="yyyy-MM-dd"/>" onclick="WdatePicker({dateFmt:'yyyy-MM-dd'});"/>
+					<div class="input-append">
+						<input id="${column.instance?uncap_first}" name="${column.instance?uncap_first}" type="text" readonly="readonly" maxlength="20" class="datepicker" value="<fmt:formatDate value="${f.dollar}}{${sourceTable.entityClassName?uncap_first}.${column.instance?uncap_first}}" pattern="yyyy-MM-dd"/>" />
+						<span class="add-on"><i class="icon-calendar"></i></span>
+					</div>
 				</div>
 			</div>
 				<#else>

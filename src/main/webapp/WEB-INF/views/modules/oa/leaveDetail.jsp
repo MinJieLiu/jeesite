@@ -129,17 +129,19 @@
 				<div class="control-group">
 					<label class="control-label">开始时间：</label>
 					<div class="controls">
-						<input id="startTime" name="startTime" type="text" readonly="readonly" maxlength="20" class="Wdate required"
-							value="<fmt:formatDate value="${leave.startTime}" pattern="yyyy-MM-dd HH:mm:ss"/>"
-							onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss',isShowClear:false});"/>
-				</div>
+                        <div class="input-append">
+                          <input id="startTime" name="startTime" type="text" readonly="readonly" maxlength="20" class="datepicker" value="<fmt:formatDate value="${leave.startTime}" pattern="yyyy-MM-dd"/>" />
+                          <span class="add-on"><i class="icon-calendar"></i></span>
+                        </div>
+				    </div>
 				</div>
 				<div class="control-group">
 					<label class="control-label">结束时间：</label>
 					<div class="controls">
-						<input id="endTime" name="endTime" type="text" readonly="readonly" maxlength="20" class="Wdate required"
-							value="<fmt:formatDate value="${leave.endTime}" pattern="yyyy-MM-dd HH:mm:ss"/>"
-							onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss',isShowClear:false});"/>
+                        <div class="input-append">
+                          <input id="endTime" name="endTime" type="text" readonly="readonly" maxlength="20" class="datepicker" value="<fmt:formatDate value="${leave.endTime}" pattern="yyyy-MM-dd"/>" />
+                          <span class="add-on"><i class="icon-calendar"></i></span>
+                        </div>
 					</div>
 				</div>
 				<div class="control-group">
@@ -183,17 +185,19 @@
 				<div class="control-group">
 					<label class="control-label">实际开始时间：</label>
 					<div class="controls">
-						<input id="realityStartTime" name="realityStartTime" type="text" readonly="readonly" maxlength="20" class="Wdate required"
-							value="<fmt:formatDate value="${leave.startTime}" pattern="yyyy-MM-dd HH:mm:ss"/>"
-							onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss',isShowClear:false});"/>
-				</div>
+                        <div class="input-append">
+                          <input id="realityStartTime" name="realityStartTime" type="text" readonly="readonly" maxlength="20" class="datepicker" value="<fmt:formatDate value="${leave.startTime}" pattern="yyyy-MM-dd"/>" />
+                          <span class="add-on"><i class="icon-calendar"></i></span>
+                        </div>
+				    </div>
 				</div>
 				<div class="control-group">
 					<label class="control-label">实际结束时间：</label>
 					<div class="controls">
-						<input id="realityEndTime" name="realityEndTime" type="text" readonly="readonly" maxlength="20" class="Wdate required"
-							value="<fmt:formatDate value="${leave.endTime}" pattern="yyyy-MM-dd HH:mm:ss"/>"
-							onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss',isShowClear:false});"/>
+                        <div class="input-append">
+                          <input id="realityEndTime" name="realityEndTime" type="text" readonly="readonly" maxlength="20" class="datepicker" value="<fmt:formatDate value="${leave.endTime}" pattern="yyyy-MM-dd"/>" />
+                          <span class="add-on"><i class="icon-calendar"></i></span>
+                        </div>
 					</div>
 				</div>
 				<div class="form-actions">

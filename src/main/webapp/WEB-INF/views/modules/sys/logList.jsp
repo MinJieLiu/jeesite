@@ -24,10 +24,16 @@
 			<label>用户ID：</label><input id="createById" name="createById" type="text" maxlength="50" class="input-small" value="${createById}"/>
 			<label>URI：</label><input id="requestUri" name="requestUri" type="text" maxlength="50" class="input-small" value="${requestUri}"/>
 			&nbsp;
-			<label>开始日期：</label><input id="beginDate" name="beginDate" type="text" readonly="readonly" maxlength="20" class="input-small Wdate"
-				value="${beginDate}" onclick="WdatePicker({dateFmt:'yyyy-MM-dd',isShowClear:false});"/>
-			<label>结束日期：</label><input id="endDate" name="endDate" type="text" readonly="readonly" maxlength="20" class="input-small Wdate"
-				value="${endDate}" onclick="WdatePicker({dateFmt:'yyyy-MM-dd',isShowClear:false});"/>
+			<label>开始日期：</label>
+			<div class="input-append">
+				<input id="beginDate" name="beginDate" type="text" readonly="readonly" maxlength="20" class="input-small datepicker" value="${beginDate}" />
+				<span class="add-on"><i class="icon-calendar"></i></span>
+			</div>
+			<label>结束日期：</label>
+			<div class="input-append">
+				<input id="endDate" name="endDate" type="text" readonly="readonly" maxlength="20" class="input-small datepicker" value="${endDate}" />
+				<span class="add-on"><i class="icon-calendar"></i></span>
+			</div>
 			<label for="exception"><input id="exception" name="exception" type="checkbox"${exception eq '1'?' checked':''} value="1"/>异常信息</label>
 			&nbsp;&nbsp;<input id="btnSubmit" class="btn btn-primary" type="submit" value="查询"/>
 		</div>

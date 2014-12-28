@@ -80,9 +80,10 @@
 					<input id="weightTop" type="checkbox" onclick="$('#weight').val(this.checked?'999':'0')"><label for="weightTop">置顶</label>
 				</span>
 				&nbsp;过期时间：
-				<input id="weightDate" name="weightDate" type="text" readonly="readonly" maxlength="20" class="input-small Wdate"
-					value="<fmt:formatDate value="${article.weightDate}" pattern="yyyy-MM-dd"/>"
-					onclick="WdatePicker({dateFmt:'yyyy-MM-dd',isShowClear:true});"/>
+                <div class="input-append">
+                  <input id="weightDate" name="weightDate" type="text" readonly="readonly" maxlength="20" class="input-small datepicker" value="<fmt:formatDate value="${article.weightDate}" pattern="yyyy-MM-dd"/>" />
+                  <span class="add-on"><i class="icon-calendar"></i></span>
+                </div>
 				<span class="help-inline">数值越大排序越靠前，过期时间可为空，过期后取消置顶。</span>
 			</div>
 		</div>
@@ -174,9 +175,10 @@
 		<div class="control-group">
 			<label class="control-label" for="createDate">发布时间:</label>
 			<div class="controls">
-				<input id="createDate" name="createDate" type="text" readonly="readonly" maxlength="20" class="input-medium Wdate"
-					value="<fmt:formatDate value="${article.createDate}" pattern="yyyy-MM-dd HH:mm:ss"/>"
-					onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss',isShowClear:false});"/>
+                <div class="input-append">
+                  <input id="createDate" name="createDate" type="text" readonly="readonly" maxlength="20" class="input-medium datepicker" value="<fmt:formatDate value="${article.createDate}" pattern="yyyy-MM-dd"/>" />
+                  <span class="add-on"><i class="icon-calendar"></i></span>
+                </div>
 			</div>
 		</div>
 		<shiro:hasPermission name="cms:article:audit">
