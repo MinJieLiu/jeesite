@@ -70,10 +70,10 @@
 		<property name="prefix" value="${web.view.prefix}"/>
 		<property name="suffix" value="${web.view.suffix}"/>
 	</bean>
-	
-	<!-- 对静态资源文件的访问， 将无法mapping到Controller的path交给default servlet handler处理 -->
-	<mvc:default-servlet-handler/>
-	
+
+	<!-- 对静态资源文件的访问 -->
+	<mvc:resources location="/static/" mapping="/static/**"/>
+
 	<!-- 定义无Controller的path<->view直接映射 -->
 	<mvc:view-controller path="/" view-name="redirect:${web.view.index}"/>
 
@@ -81,7 +81,7 @@
 	<mvc:interceptors>
 		<bean class="com.thinkgem.jeesite.modules.sys.interceptor.LogInterceptor" />
 	</mvc:interceptors>
-	
+
 	<!-- 支持Shiro对Controller的方法级AOP安全控制 begin-->
 	<bean class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator" depends-on="lifecycleBeanPostProcessor">
 		<property name="proxyTargetClass" value="true" />
